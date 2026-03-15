@@ -12,7 +12,5 @@ steps:
   - script: echo "Hey $var1 $var2"
     displayName: "Stage-1"
 
-  - script: "Welcome $var1"
+  - script: echo "Welcome $var1"
     displayName: "stage-2"
-
-    
