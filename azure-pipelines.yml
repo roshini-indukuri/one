@@ -2,11 +2,11 @@ trigger:
 - master
 
 variables:
-var1: "Mustafa"
-var2: "Shaik"
+  var1: "Mustafa"
+  var2: "Shaik"
 
 pool:
-  name: ubuntu-latest
+  vmImage: ubuntu-latest
 
 steps:
   - script: echo "Hey $var1 $var2"
