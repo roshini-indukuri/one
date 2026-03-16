@@ -1,5 +1,5 @@
 trigger:
-- master
+- oracle
 
 variables:
   var1: "Mustafa"
