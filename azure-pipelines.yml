@@ -2,7 +2,7 @@ trigger:
 - master
 
 pool:
-  name: flm-pool
+  name: new-pool
 
 steps:
 - task: Maven@4
