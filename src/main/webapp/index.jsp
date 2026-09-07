@@ -1701,6 +1701,96 @@
             }
         });
 
+import java.util.*;
+
+class Product {
+    int id;
+    String name;
+    double price;
+
+    Product(int id, String name, double price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+}
+
+class Cart {
+    List<Product> items = new ArrayList<>();
+
+    void addProduct(Product p) {
+        items.add(p);
+        System.out.println(p.name + " added to cart.");
+    }
+
+    void viewCart() {
+        System.out.println("Your Cart:");
+        double total = 0;
+        for (Product p : items) {
+            System.out.println(p.name + " - $" + p.price);
+            total += p.price;
+        }
+        System.out.println("Total: $" + total);
+    }
+}
+
+public class EcommApp {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Sample product catalog
+        List<Product> catalog = Arrays.asList(
+            new Product(1, "Laptop", 800.00),
+            new Product(2, "Smartphone", 500.00),
+            new Product(3, "Headphones", 50.00)
+        );
+
+        Cart cart = new Cart();
+
+        while (true) {
+            System.out.println("\n--- E-Commerce Menu ---");
+            System.out.println("1. View Products");
+            System.out.println("2. Add to Cart");
+            System.out.println("3. View Cart");
+            System.out.println("4. Checkout");
+            System.out.println("5. Exit");
+            System.out.print("Choose option: ");
+
+            int choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Available Products:");
+                    for (Product p : catalog) {
+                        System.out.println(p.id + ". " + p.name + " - $" + p.price);
+                    }
+                    break;
+                case 2:
+                    System.out.print("Enter product ID to add: ");
+                    int id = sc.nextInt();
+                    catalog.stream()
+                           .filter(p -> p.id == id)
+                           .findFirst()
+                           .ifPresent(cart::addProduct);
+                    break;
+                case 3:
+                    cart.viewCart();
+                    break;
+                case 4:
+                    cart.viewCart();
+                    System.out.println("Checkout complete. Thank you!");
+                    return;
+                case 5:
+                    System.out.println("Goodbye!");
+                    return;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        }
+    }
+}
+
+
         console.log('🚀 NexusShop — user‑friendly e‑commerce demo loaded.');
     </script>
 
