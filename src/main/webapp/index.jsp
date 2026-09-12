@@ -1,45 +1,93 @@
-package com.roshini.closet;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-public class Product {
-    private int id;
-    private String name;
-    private String category;
-    private String imagePath;
-    private double price;
+    <title>Roshini Closet</title>
 
-    public Product(int id, String name, String category, String imagePath, double price) {
-        this.id = id;
-        this.name = name;
-        this.category = category;
-        this.imagePath = imagePath;
-        this.price = price;
-    }
-
-    public void display() {
-        System.out.println(id + ". " + name + " (" + category + ")");
-        System.out.println("   Price: $" + price);
-        System.out.println("   Image: " + imagePath);
-    }
-}
-package com.roshini.closet;
-
-import java.util.*;
-
-public class RoshiniCloset {
-    public static void main(String[] args) {
-        List<Product> catalog = Arrays.asList(
-            new Product(1, "Red Evening Dress", "Dress", "images/red_dress.jpg", 120.00),
-            new Product(2, "Blue Summer Dress", "Dress", "images/blue_dress.jpg", 80.00),
-            new Product(3, "Leather Handbag", "Bag", "images/leather_bag.jpg", 150.00),
-            new Product(4, "Casual Tote Bag", "Bag", "images/tote_bag.jpg", 60.00)
-        );
-
-        System.out.println("✨ Welcome to Roshini Closet ✨");
-        System.out.println("Our Collection:\n");
-
-        for (Product p : catalog) {
-            p.display();
-            System.out.println();
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fff0f5, #fce4ec);
+            color: #4a2635;
         }
-    }
-}
+
+        header {
+            background: #8e3a59;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h2 {
+            color: #8e3a59;
+            font-size: 40px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #8e3a59;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+        }
+
+        .button:hover {
+            background: #c44f79;
+        }
+
+        footer {
+            background: #8e3a59;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌸 Roshini Closet 🌸</h1>
+    <p>Elegance • Style • Beauty</p>
+</header>
+
+<section class="hero">
+
+    <h2>✨ Welcome to Roshini Closet ✨</h2>
+
+    <p>
+        Discover beautiful dresses, stylish bags
+        and elegant fashion.
+    </p>
+
+    <a href="closet" class="button">
+        View Our Collection
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Roshini Closet 💕
+</footer>
+
+</body>
+</html>
