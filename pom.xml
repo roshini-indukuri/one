@@ -8,7 +8,7 @@
     <groupId>com.roshini</groupId>
     <artifactId>closet</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>   <!-- ✅ put it here -->
 
     <name>Roshini Closet</name>
 
@@ -30,18 +30,11 @@
                 </configuration>
             </plugin>
 
-            <!-- Jar plugin with main class -->
+            <!-- WAR plugin (optional, Maven adds by default) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.roshini.closet.RoshiniCloset</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
             </plugin>
         </plugins>
     </build>
